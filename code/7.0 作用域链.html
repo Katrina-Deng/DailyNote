@@ -1,0 +1,33 @@
+<!--
+ * @Des:
+ * @Version:
+ * @Author: Ellen
+ * @Date: 2021-04-12 16:22:56
+ * @LastEditors: Ellen
+ * @LastEditTime: 2021-09-07 22:39:56
+-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>作用域链</h1>
+  </body>
+  <script>
+    function buildUrl() {
+      let qs = '?debug=true';
+      console.log('外', location.href);
+      with (location) {
+        let url = href + qs;
+        console.log(href);
+        return url;
+      }
+    }
+    let urls = buildUrl();
+    console.log('1', urls);
+  </script>
+</html>
